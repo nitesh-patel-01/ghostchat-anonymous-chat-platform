@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white text-gray-900 light">
+<head>
+  <meta charset="UTF-8" />
+  <title>GhostChat 👻 – Anonymous Social Chat & Messaging Platform</title>
+  <meta name="description" content="GhostChat is an anonymous social chat platform for sharing thoughts, following users, and sending direct messages. Join global conversations with privacy and fun!" />
+  <meta name="keywords" content="anonymous chat, social messaging, privacy, online chat, GhostChat, direct messages, global conversations, anonymous social platform, online chatting site, online anonymous site, anonymous chat app, chat with strangers, secret chat app, online chat app, chat room online, best chat app in india, secure chat app, free chat app, free chatting app, live chat app, private chat app, secret messaging appghost chat, anonymous chat india" />
+  <meta name="author" content="Nitesh Patel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#06b6d4" />
+  <link rel="canonical" href="https://ghostchat-share-anonmous-thoughts.blogspot.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="GhostChat 👻 – Anonymous Social Chat & Messaging Platform" />
+  <meta property="og:description" content="Join GhostChat to share thoughts anonymously, follow interesting users, and send private messages. Safe, fun, and privacy-first!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ghostchat-share-anonmous-thoughts.blogspot.com" />
+  <meta property="og:image" content="https://png.pngtree.com/png-clipart/20230928/original/pngtree-sticker-halloween-cute-ghost-png-image_13010111.png" />
+  <meta property="og:site_name" content="GhostChat" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GhostChat 👻 – Anonymous Social Chat & Messaging Platform" />
+  <meta name="twitter:description" content="Join GhostChat for anonymous, safe, and fun conversations." />
+  <meta name="twitter:image" content="https://e7.pngegg.com/pngimages/708/311/png-clipart-twitter-twitter-thumbnail.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Structured Data: WebSite, Organization, SocialMediaPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GhostChat",
+    "url": "https://ghostchat-share-anonmous-thoughts.blogspot.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ghostchat-share-anonmous-thoughts.blogspot.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GhostChat",
+    "url": "https://ghostchat-share-anonmous-thoughts.blogspot.com/",
+    "logo": "https://ghostchat-share-anonmous-thoughts.blogspot.com/https://png.pngtree.com/png-clipart/20230928/original/pngtree-sticker-halloween-cute-ghost-png-image_13010111.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "niteshpatel7479@gmail.com",
+      "contactType": "customer support"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SocialMediaPosting",
+    "headline": "GhostChat 👻 – Anonymous Social Chat & Messaging Platform",
+    "description": "GhostChat is an anonymous social chat platform for sharing thoughts, following users, and sending direct messages. Join global conversations with privacy and fun!",
+    "url": "https://ghostchat-share-anonmous-thoughts.blogspot.com/",
+    "datePublished": "2025-07-06T06:31:00Z",
+    "author": {
+      "url": "https://ghostchat-share-anonmous-thoughts.blogspot.com/",
+      "@type": "Person",
+      "name": "Nitesh Patel"
+    },
+    "image": "https://png.pngtree.com/png-clipart/20230928/original/pngtree-sticker-halloween-cute-ghost-png-image_13010111.png"
+  }
+  </script>
+
+  <!-- Tailwind config for class-based dark mode -->
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    html {
+      font-family: 'Inter', 'Fira Code', monospace;
+    }
+    .neon {
+      text-shadow: 0 0 8px #0ff, 0 0 16px #0ff4, 0 0 32px #0ff2;
+    }
+    .glow {
+      box-shadow: 0 0 10px #0ff7, 0 0 20px #0ff5;
+    }
+    .emoji-btn.selected {
+      background: #06b6d4;
+      color: #000;
+    }
+    .hashtag {
+      color: #06b6d4;
+      cursor: pointer;
+    }
+    .bg-glass {
+      background: rgba(30, 41, 59, 0.85);
+      backdrop-filter: blur(8px);
+    }
+    .tab-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f43f5e;
+      display: inline-block;
+      margin-left: 4px;
+    }
+    .transition-bg {
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark .bg-glass {
+      background: rgba(30, 41, 59, 0.85);
+    }
+    .light .bg-glass {
+      background: rgba(255, 255, 255, 0.95);
+    }
+    /* Visually hidden for accessibility/SEO */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+  <!-- Ad script (deferred to not block rendering) -->
+  <script type="text/javascript" src="//pl27087777.profitableratecpm.com/94/db/d8/94dbd8394268c874906a0b110bb9ab14.js" defer></script>
+</head>
+<body class="bg-white dark:bg-gray-950 min-h-screen flex flex-col transition-bg" style="padding-bottom:2.5rem;">
+  <!-- HEADER -->
+  <header class="w-full px-4 py-3 flex items-center justify-between bg-gradient-to-r from-cyan-200/60 to-fuchsia-100/30 dark:from-cyan-500/30 dark:to-fuchsia-500/20 neon glow rounded-b-2xl transition-bg" role="banner">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold tracking-wider neon">👻 GhostChat</span>
+      <button id="darkModeBtn" class="ml-2 px-2 py-1 rounded bg-gray-200 hover:bg-cyan-200 dark:bg-gray-800/60 dark:hover:bg-cyan-600 transition text-cyan-700 dark:text-cyan-300 text-xs font-mono border border-cyan-400/30" aria-label="Toggle dark mode">🌗</button>
+    </div>
+    <div class="flex items-center space-x-3">
+      <span id="codenameDisplay" class="font-mono text-cyan-600 dark:text-cyan-400 bg-gray-100 dark:bg-gray-800/80 px-3 py-1 rounded-full shadow-lg" aria-live="polite" aria-atomic="true"></span>
+      <button id="exportCodenameBtn" class="px-2 py-1 rounded bg-gray-200 hover:bg-cyan-200 dark:bg-gray-700/60 dark:hover:bg-cyan-700 transition text-cyan-700 dark:text-cyan-200 text-xs font-mono border border-cyan-400/30" aria-label="Export codename">🔑 Export</button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="w-full flex justify-center mt-3 mb-1" aria-label="Main navigation">
+    <div class="flex gap-2 bg-white/80 dark:bg-glass px-4 py-2 rounded-full shadow-lg transition-bg">
+      <button id="tab-global" class="tab-btn px-4 py-1 rounded-full font-bold flex items-center gap-1 transition-bg" aria-label="Global feed" aria-current="page">🌍 Global</button>
+      <button id="tab-followed" class="tab-btn px-4 py-1 rounded-full font-bold flex items-center gap-1 transition-bg" aria-label="Followed feed">👤 Followed</button>
+      <button id="tab-inbox" class="tab-btn px-4 py-1 rounded-full font-bold flex items-center gap-1 relative transition-bg" aria-label="Inbox" aria-haspopup="true" aria-expanded="false">📥 Inbox <span id="inboxDot" class="hidden tab-dot absolute right-0 top-0" aria-hidden="true"></span></button>
+      <button id="tab-notifications" class="tab-btn px-4 py-1 rounded-full font-bold flex items-center gap-1 relative transition-bg" aria-label="Notifications" aria-haspopup="true" aria-expanded="false">🔔 Notifications <span id="notifDot" class="hidden tab-dot absolute right-0 top-0" aria-hidden="true"></span></button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main" class="flex-1 w-full max-w-2xl mx-auto mt-2 px-2 pb-16 transition-bg" aria-label="Main Content">
+    <h1 class="text-3xl font-bold text-center my-4">GhostChat – Anonymous Social Chat Platform</h1>
+    <section>
+      <h2 class="sr-only">Share your thoughts anonymously</h2>
+      <noscript>
+        <div class="text-center text-red-600 font-bold">
+          JavaScript is required to use GhostChat. Please enable JavaScript in your browser.
+        </div>
+      </noscript>
+      <!-- Content dynamically generated by JS -->
+    </section>
+  </main>
+
+  <!-- POST MODAL (for DMs) -->
+  <div id="dmModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden" aria-modal="true" role="dialog" aria-labelledby="dmModalTitle" aria-describedby="dmModalDesc">
+    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-2xl max-w-sm w-full transition-bg">
+      <div class="flex justify-between items-center mb-2">
+        <h3 id="dmModalTitle" class="text-lg font-bold text-cyan-600 dark:text-cyan-400">Send DM to <span id="dmToCodename"></span></h3>
+        <button id="closeDmModal" class="text-xl text-gray-400 hover:text-pink-400" aria-label="Close DM modal">&times;</button>
+      </div>
+      <textarea id="dmMessage" class="w-full h-24 p-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 mb-3 focus:outline-cyan-400 transition-bg" maxlength="500" placeholder="Type your anonymous message..."></textarea>
+      <button id="sendDmBtn" class="w-full py-2 rounded bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition">Send DM</button>
+    </div>
+  </div>
+
+  <!-- REPORT MODAL -->
+  <div id="reportModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden" aria-modal="true" role="dialog" aria-labelledby="reportModalTitle" aria-describedby="reportModalDesc">
+    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-2xl max-w-sm w-full transition-bg">
+      <div class="flex justify-between items-center mb-2">
+        <h3 id="reportModalTitle" class="text-lg font-bold text-pink-600 dark:text-pink-400">Report Post</h3>
+        <button id="closeReportModal" class="text-xl text-gray-400 hover:text-pink-400" aria-label="Close report modal">&times;</button>
+      </div>
+      <div id="reportModalDesc" class="mb-3 text-gray-800 dark:text-gray-200">Why are you reporting this post?</div>
+      <textarea id="reportReason" class="w-full h-20 p-2 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 mb-3 focus:outline-pink-400 transition-bg" maxlength="300" placeholder="Describe the issue..."></textarea>
+      <button id="sendReportBtn" class="w-full py-2 rounded bg-pink-500 hover:bg-pink-400 text-black font-bold transition">Submit Report</button>
+    </div>
+  </div>
+
+  <!-- FIREBASE + APP LOGIC -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js" defer></script>
+  <script defer>
+    // Wait for DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // ---- CONFIG ----
+      const firebaseConfig = {
+        apiKey: "AIzaSyDgMjKdJJm_hJPC7z_jqRjgKjAAbKxUrmE",
+        authDomain: "ghost-chat-491d1.firebaseapp.com",
+        projectId: "ghost-chat-491d1",
+        storageBucket: "ghost-chat-491d1.firebasestorage.app",
+        messagingSenderId: "1045987717444",
+        appId: "1:1045987717444:web:c89699b466b33db0932711",
+        measurementId: "G-8Y5D7Q0DHN"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      // ---- UTILITIES ----
+      const adjectives = [
+        "mirror", "cyber", "shadow", "neon", "silent", "ghost", "cosmic", "lone", "midnight", "electric", "hidden", "quantum", "dream", "static", "glitch", "pixel", "phantom", "stellar", "binary", "nova", "frost", "echo", "lunar", "arcane", "hyper", "void", "zero", "mystic", "infra", "sable"
+      ];
+      const nouns = [
+        "mind", "soul", "walker", "pulse", "rider", "seer", "hacker", "spectrum", "signal", "oracle", "drifter", "wanderer", "savant", "sprite", "vapor", "sphinx", "cipher", "entity", "matrix", "owl", "raven", "wolf", "fox", "crow", "tiger", "python", "lion", "panther", "seraph", "daemon"
+      ];
+      function randomCodename() {
+        const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+        const noun = nouns[Math.floor(Math.random() * nouns.length)];
+        const num = Math.floor(Math.random() * 90) + 10;
+        return `@${adj}_${noun}${num}`;
+      }
+      function timeAgo(ts) {
+        const now = Date.now();
+        const diff = now - ts;
+        if (diff < 60000) return "just now";
+        if (diff < 3600000) return `${Math.floor(diff / 60000)} minute${Math.floor(diff / 60000) == 1 ? '' : 's'} ago`;
+        if (diff < 86400000) return `${Math.floor(diff / 3600000)} hour${Math.floor(diff / 3600000) == 1 ? '' : 's'} ago`;
+        return new Date(ts).toLocaleString();
+      }
+      function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+      }
+      function parseHashtags(text) {
+        return escapeHTML(text).replace(/#(\w+)/g, '<span class="hashtag">#$1</span>');
+      }
+      function emojiToChar(k) {
+        return { likes: '👍', hearts: '❤️', funny: '😂', wow: '😮', fire: '🔥' }[k] || '';
+      }
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+      }
+
+      // ---- STATE ----
+      let codename = localStorage.getItem('ghostchat_codename');
+      if (!codename) {
+        codename = randomCodename();
+        localStorage.setItem('ghostchat_codename', codename);
+      }
+      let followed = JSON.parse(localStorage.getItem('ghostchat_followed') || '[]');
+      let savedPosts = JSON.parse(localStorage.getItem('ghostchat_saved') || '[]');
+      let darkMode = localStorage.getItem('ghostchat_darkmode') === '1';
+      let hashtagFilter = null;
+      let notifUnread = false, inboxUnread = false;
+
+      // ---- UI INIT ----
+      const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+      function setDarkMode(on) {
+        if (on) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        }
+        localStorage.setItem('ghostchat_darkmode', on ? '1' : '0');
+        $('#darkModeBtn').textContent = on ? '🌞' : '🌗';
+      }
+      setDarkMode(darkMode);
+      $('#darkModeBtn').onclick = () => { darkMode = !darkMode; setDarkMode(darkMode); };
+
+      $('#codenameDisplay').textContent = codename;
+      $('#exportCodenameBtn').onclick = () => {
+        copyToClipboard(codename);
+        $('#exportCodenameBtn').textContent = '✅ Copied!';
+        setTimeout(() => $('#exportCodenameBtn').textContent = '🔑 Export', 1000);
+      };
+
+      // ---- NAVIGATION ----
+      let currentTab = 'global';
+      function setTab(tab) {
+        currentTab = tab;
+        $$('.tab-btn').forEach(btn => btn.classList.remove('bg-cyan-400', 'text-black'));
+        $(`#tab-${tab}`).classList.add('bg-cyan-400', 'text-black');
+        // Update aria-current
+        $$('.tab-btn').forEach(btn => btn.setAttribute('aria-current', 'false'));
+        $(`#tab-${tab}`).setAttribute('aria-current', 'page');
+        renderMain();
+      }
+      $$('#tab-global, #tab-followed, #tab-inbox, #tab-notifications').forEach(btn => {
+        btn.onclick = () => setTab(btn.id.split('-')[1]);
+      });
+
+      // ---- MAIN RENDER ----
+      let posts = [], reactions = {}, comments = {}, notifications = [], messages = [];
+      let postsUnsub = null, reactionsUnsub = null, commentsUnsub = null, notifUnsub = null, inboxUnsub = null;
+
+      // --- Firestore listeners (called only once) ---
+      listenPosts(); listenReactions(); listenComments(); listenNotifications(); listenInbox();
+
+      function listenPosts() {
+        if (postsUnsub) postsUnsub();
+        postsUnsub = db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snap => {
+          posts = snap.docs.map(d => ({ ...d.data(), id: d.id }));
+          renderMain();
+        });
+      }
+      function listenReactions() {
+        if (reactionsUnsub) reactionsUnsub();
+        reactionsUnsub = db.collection('reactions').onSnapshot(snap => {
+          reactions = {};
+          snap.docs.forEach(d => reactions[d.id] = d.data());
+          renderMain();
+        });
+      }
+      function listenComments() {
+        if (commentsUnsub) commentsUnsub();
+        commentsUnsub = db.collection('comments').onSnapshot(snap => {
+          comments = {};
+          snap.docs.forEach(d => {
+            let c = d.data();
+            if (!comments[c.postId]) comments[c.postId] = [];
+            comments[c.postId].push({ ...c, id: d.id });
+          });
+          renderMain();
+        });
+      }
+      function listenNotifications() {
+        if (notifUnsub) notifUnsub();
+        notifUnsub = db.collection('notifications').onSnapshot(snap => {
+          notifications = snap.docs.map(d => ({ ...d.data(), id: d.id }));
+          notifUnread = notifications.some(n => n.to === codename && !n.read);
+          $('#notifDot').classList.toggle('hidden', !notifUnread);
+          renderMain();
+        });
+      }
+      function listenInbox() {
+        if (inboxUnsub) inboxUnsub();
+        inboxUnsub = db.collection('messages').onSnapshot(snap => {
+          messages = snap.docs.map(d => ({ ...d.data(), id: d.id }));
+          inboxUnread = messages.some(m => m.to === codename && !m.read);
+          $('#inboxDot').classList.toggle('hidden', !inboxUnread);
+          renderMain();
+        });
+      }
+
+      function renderMain() {
+        $('#main').innerHTML = '';
+        // POST BOX (only in global)
+        if (currentTab === 'global') {
+          $('#main').innerHTML += `
+          <section class="mb-6 bg-gray-100 dark:bg-glass p-4 rounded-xl glow transition-bg" aria-label="Post a new thought">
+            <form id="postForm" class="flex flex-col gap-2">
+              <textarea id="postContent" class="w-full h-20 p-2 rounded bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-cyan-400 font-mono transition-bg" maxlength="300" placeholder="What's on your mind? (max 300 chars)" aria-label="Write your anonymous post"></textarea>
+              <div class="flex items-center justify-between">
+                <div class="text-xs text-gray-400" id="charCount">0/300</div>
+                <button class="px-4 py-1 rounded bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition shadow" type="submit">Post Thought</button>
+              </div>
+            </form>
+          </section>`;
+          if ($('#postContent')) {
+            $('#postContent').oninput = () => $('#charCount').textContent = $('#postContent').value.length + '/300';
+          }
+        }
+        // FEEDS
+        if (currentTab === 'global' || currentTab === 'followed') {
+          let feedPosts = posts;
+          if (currentTab === 'followed') feedPosts = posts.filter(p => followed.includes(p.codename));
+          if (hashtagFilter) feedPosts = feedPosts.filter(p => (p.hashtags || []).includes(hashtagFilter));
+          if (!feedPosts.length) {
+            $('#main').innerHTML += `<div class="text-center text-gray-400 mt-12">No posts yet.</div>`;
+          } else {
+            feedPosts.forEach(p => {
+              $('#main').innerHTML += renderPost(p);
+            });
+          }
+        }
+        // INBOX
+        if (currentTab === 'inbox') {
+          $('#main').innerHTML = `<h2 class="text-xl font-bold mb-3 neon">📥 Inbox</h2>`;
+          let myMsgs = messages.filter(m => m.from === codename || m.to === codename);
+          if (!myMsgs.length) {
+            $('#main').innerHTML += `<div class="text-center text-gray-400 mt-10">No messages yet.<br><span class="text-xs text-gray-300">Start a conversation by sending a DM!</span></div>`;
+          } else {
+            let convos = {};
+            myMsgs.forEach(m => {
+              let other = m.from === codename ? m.to : m.from;
+              if (!convos[other]) convos[other] = [];
+              convos[other].push(m);
+            });
+            Object.keys(convos).sort().forEach(other => {
+              $('#main').innerHTML += `
+                <div class="mb-5">
+                  <div class="font-bold text-cyan-600 dark:text-cyan-300 mb-1">Conversation with <span class="font-mono">${other}</span></div>
+                  <div class="space-y-2" role="list">
+                  ${convos[other].sort((a, b) => a.timestamp - b.timestamp).map(m => {
+                let isMe = m.from === codename;
+                return `
+                    <div class="flex ${isMe ? 'justify-end' : 'justify-start'}" role="listitem">
+                      <div class="${isMe ? 'bg-cyan-100 dark:bg-cyan-900 text-cyan-900 dark:text-cyan-100' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100'} px-3 py-2 rounded-xl max-w-xs shadow">
+                        <div class="text-xs font-mono mb-1">${isMe ? 'You' : m.from}</div>
+                        <div class="whitespace-pre-line font-mono">${escapeHTML(m.message)}</div>
+                        <div class="text-[11px] text-gray-400 mt-1 text-right">${timeAgo(m.timestamp)}</div>
+                      </div>
+                    </div>
+                  `;
+              }).join('')}
+                  </div>
+                </div>
+              `;
+            });
+          }
+        }
+        // NOTIFICATIONS
+        if (currentTab === 'notifications') {
+          $('#main').innerHTML = `<h2 class="text-xl font-bold mb-3 neon">🔔 Notifications</h2>`;
+          let myNotifs = notifications.filter(n => n.to === codename).sort((a, b) => b.timestamp - a.timestamp);
+          if (!myNotifs.length) {
+            $('#main').innerHTML += `<div class="text-center text-gray-400 mt-10">No notifications yet.</div>`;
+          } else {
+            myNotifs.forEach(n => {
+              let msg = '';
+              if (n.type === 'reaction') {
+                msg = `<span class="font-mono text-cyan-600 dark:text-cyan-300">${n.from}</span> reacted <span>${n.emoji}</span> on your post`;
+              } else if (n.type === 'comment') {
+                msg = `<span class="font-mono text-cyan-600 dark:text-cyan-300">${n.from}</span> commented on your post: <span class="italic text-gray-900 dark:text-gray-100">‘${escapeHTML(n.text)}’</span>`;
+              }
+              $('#main').innerHTML += `
+                <article class="bg-gray-100 dark:bg-glass rounded-xl p-4 mb-3 shadow transition-bg" role="listitem" tabindex="0">
+                  <div class="flex items-center justify-between">
+                    <span>${msg}</span>
+                    <time class="text-xs text-gray-400" datetime="${new Date(n.timestamp).toISOString()}">${timeAgo(n.timestamp)}</time>
+                  </div>
+                </article>
+              `;
+            });
+          }
+        }
+        // Attach hashtag click
+        $$('.hashtag').forEach(h => {
+          h.onclick = () => {
+            hashtagFilter = h.textContent.toLowerCase();
+            renderMain();
+          };
+          h.setAttribute('role', 'button');
+          h.setAttribute('tabindex', '0');
+          h.addEventListener('keypress', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              hashtagFilter = h.textContent.toLowerCase();
+              renderMain();
+            }
+          });
+        });
+      }
+
+      function renderPost(p) {
+        let isFollowed = followed.includes(p.codename);
+        let isSaved = savedPosts.includes(p.id);
+        let myReacts = reactions[p.id] || {};
+        let myComments = comments[p.id] || [];
+        let hashtags = (p.hashtags || []).map(h => `<span class="hashtag">#${h.replace('#', '')}</span>`).join(' ');
+        return `
+        <article class="bg-gray-100 dark:bg-glass rounded-xl p-4 mb-5 shadow glow transition-bg" data-postid="${p.id}" role="article" aria-label="Post by ${p.codename}">
+          <header class="flex items-center justify-between mb-1">
+            <span class="font-mono text-cyan-600 dark:text-cyan-400">${p.codename}</span>
+            <time class="text-xs text-gray-400" datetime="${new Date(p.timestamp).toISOString()}">${timeAgo(p.timestamp)}</time>
+          </header>
+          <div class="whitespace-pre-line font-mono text-lg text-gray-900 dark:text-gray-100 mb-2">${parseHashtags(p.content)}</div>
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <button class="followBtn px-2 py-1 rounded bg-gray-200 hover:bg-cyan-200 dark:bg-gray-800/80 dark:hover:bg-cyan-600 text-cyan-700 dark:text-cyan-300 font-mono text-xs border border-cyan-400/30" aria-pressed="${isFollowed}">${isFollowed ? '✔ Following' : '➕ Follow'}</button>
+            ${isFollowed ? `<button class="unfollowBtn px-2 py-1 rounded bg-gray-200 hover:bg-pink-200 dark:bg-gray-800/80 dark:hover:bg-pink-600 text-pink-700 dark:text-pink-300 font-mono text-xs border border-pink-400/30">🚫 Unfollow</button>` : ''}
+            <button class="saveBtn px-2 py-1 rounded bg-gray-200 hover:bg-yellow-200 dark:bg-gray-800/80 dark:hover:bg-yellow-400 text-yellow-700 dark:text-yellow-200 font-mono text-xs border border-yellow-400/30" aria-pressed="${isSaved}">${isSaved ? '🔖 Saved' : '📌 Save'}</button>
+            <button class="dmBtn px-2 py-1 rounded bg-gray-200 hover:bg-fuchsia-200 dark:bg-gray-800/80 dark:hover:bg-fuchsia-600 text-fuchsia-700 dark:text-fuchsia-200 font-mono text-xs border border-fuchsia-400/30">✉️ DM</button>
+            <button class="reportBtn px-2 py-1 rounded bg-gray-200 hover:bg-pink-200 dark:bg-gray-800/80 dark:hover:bg-pink-600 text-pink-700 dark:text-pink-200 font-mono text-xs border border-pink-400/30">🚩 Report</button>
+          </div>
+          <div class="flex items-center gap-2 mb-2 flex-wrap" role="group" aria-label="Reactions">
+            ${renderReactions(p.id, myReacts)}
+          </div>
+          <div class="text-xs text-cyan-600 dark:text-cyan-400 mb-2">${hashtags}</div>
+          <section class="comments mb-1" aria-label="Comments">
+            ${myComments.slice(-2).map(c => `
+              <div class="flex items-center gap-2 mb-1" role="article" aria-label="Comment by ${c.codename}">
+                <span class="font-mono text-cyan-600 dark:text-cyan-300">${c.codename}</span>
+                <time class="text-xs text-gray-400">${timeAgo(c.timestamp)}</time>
+                <p class="font-mono text-gray-900 dark:text-gray-100">${escapeHTML(c.text)}</p>
+              </div>
+            `).join('')}
+          </section>
+          <form class="commentForm flex gap-2" aria-label="Add a comment form">
+            <input class="commentInput flex-1 px-2 py-1 rounded bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono text-sm focus:outline-cyan-400 transition-bg" maxlength="120" placeholder="Add a comment..." aria-label="Add a comment input" />
+            <button class="px-2 py-1 rounded bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition" type="submit" aria-label="Submit comment">💬</button>
+          </form>
+        </article>
+        `;
+      }
+      function renderReactions(postId, reacts) {
+        const emojis = [
+          { k: 'likes', e: '👍' }, { k: 'hearts', e: '❤️' }, { k: 'funny', e: '😂' }, { k: 'wow', e: '😮' }, { k: 'fire', e: '🔥' }
+        ];
+        return emojis.map(({ k, e }) => `
+          <button class="emoji-btn px-2 py-1 rounded bg-gray-200 hover:bg-cyan-200 dark:bg-gray-800/80 dark:hover:bg-cyan-600 text-cyan-700 dark:text-cyan-200 font-bold border border-cyan-400/30" data-emoji="${k}" data-postid="${postId}" aria-label="React with ${e}">
+            ${e} <span class="text-xs">${reacts[k] || 0}</span>
+          </button>
+        `).join('');
+      }
+
+      // ---- POST/COMMENT/DM/REPORT HANDLERS (delegated) ----
+      $('#main').addEventListener('click', async e => {
+        // Follow/Unfollow
+        if (e.target.classList.contains('followBtn')) {
+          let postId = e.target.closest('article').dataset.postid;
+          let post = posts.find(p => p.id === postId);
+          if (!followed.includes(post.codename)) {
+            followed.push(post.codename);
+            localStorage.setItem('ghostchat_followed', JSON.stringify(followed));
+            renderMain();
+          }
+        }
+        if (e.target.classList.contains('unfollowBtn')) {
+          let postId = e.target.closest('article').dataset.postid;
+          let post = posts.find(p => p.id === postId);
+          followed = followed.filter(c => c !== post.codename);
+          localStorage.setItem('ghostchat_followed', JSON.stringify(followed));
+          renderMain();
+        }
+        // Save/Unsave
+        if (e.target.classList.contains('saveBtn')) {
+          let postId = e.target.closest('article').dataset.postid;
+          if (!savedPosts.includes(postId)) {
+            savedPosts.push(postId);
+          } else {
+            savedPosts = savedPosts.filter(id => id !== postId);
+          }
+          localStorage.setItem('ghostchat_saved', JSON.stringify(savedPosts));
+          renderMain();
+        }
+        // DM
+        if (e.target.classList.contains('dmBtn')) {
+          let postId = e.target.closest('article').dataset.postid;
+          let post = posts.find(p => p.id === postId);
+          showDmModal(post.codename);
+        }
+        // Report
+        if (e.target.classList.contains('reportBtn')) {
+          let postId = e.target.closest('article').dataset.postid;
+          showReportModal(postId);
+        }
+        // Reaction
+        if (e.target.classList.contains('emoji-btn')) {
+          let postId = e.target.dataset.postid;
+          let emoji = e.target.dataset.emoji;
+          let reacts = reactions[postId] || {};
+          reacts[emoji] = (reacts[emoji] || 0) + 1;
+          await db.collection('reactions').doc(postId).set(reacts);
+          // Notification
+          let post = posts.find(p => p.id === postId);
+          if (post.codename !== codename) {
+            await db.collection('notifications').add({
+              type: 'reaction', from: codename, to: post.codename, postId, emoji: emojiToChar(emoji), timestamp: Date.now()
+            });
+          }
+        }
+        // Hashtag
+        if (e.target.classList.contains('hashtag')) {
+          hashtagFilter = e.target.textContent.toLowerCase();
+          renderMain();
+        }
+      });
+
+      // ---- POST FORM/COMMENT FORM SUBMIT (delegated) ----
+      $('#main').addEventListener('submit', async e => {
+        // Post submit
+        if (e.target && e.target.id === 'postForm') {
+          e.preventDefault();
+          let content = $('#postContent').value.trim();
+          if (!content) return;
+          let hashtags = (content.match(/#(\w+)/g) || []).map(h => h.toLowerCase());
+          await db.collection('posts').add({
+            codename, content, timestamp: Date.now(), hashtags
+          });
+          $('#postContent').value = '';
+          $('#charCount').textContent = '0/300';
+        }
+        // Comment submit
+        if (e.target.classList.contains('commentForm')) {
+          e.preventDefault();
+          let postId = e.target.closest('article').dataset.postid;
+          let input = e.target.querySelector('.commentInput');
+          let text = input.value.trim();
+          if (!text) return;
+          await db.collection('comments').add({
+            postId, codename, text, timestamp: Date.now()
+          });
+          // Notification
+          let post = posts.find(p => p.id === postId);
+          if (post.codename !== codename) {
+            await db.collection('notifications').add({
+              type: 'comment', from: codename, to: post.codename, postId, text, timestamp: Date.now()
+            });
+          }
+          input.value = '';
+        }
+      });
+
+      // ---- DM MODAL ----
+      function showDmModal(toCodename) {
+        $('#dmModal').classList.remove('hidden');
+        $('#dmToCodename').textContent = toCodename;
+        $('#dmMessage').value = '';
+        $('#sendDmBtn').onclick = async () => {
+          let msg = $('#dmMessage').value.trim();
+          if (!msg) return;
+          await db.collection('messages').add({
+            from: codename, to: toCodename, message: msg, timestamp: Date.now()
+          });
+          $('#dmModal').classList.add('hidden');
+        };
+      }
+      $('#closeDmModal').onclick = () => $('#dmModal').classList.add('hidden');
+
+      // ---- REPORT MODAL ----
+      let reportPostId = null;
+      function showReportModal(postId) {
+        reportPostId = postId;
+        $('#reportModal').classList.remove('hidden');
+        $('#reportReason').value = '';
+      }
+      $('#closeReportModal').onclick = () => $('#reportModal').classList.add('hidden');
+      $('#sendReportBtn').onclick = async () => {
+        let reason = $('#reportReason').value.trim();
+        if (!reason) return;
+        await db.collection('reports').add({
+          postId: reportPostId, codename, reason, timestamp: Date.now()
+        });
+        $('#reportModal').classList.add('hidden');
+        alert('Report submitted. Thank you!');
+      };
+
+      // ---- HASHTAG FILTER RESET ----
+      document.body.addEventListener('keydown', e => {
+        if (hashtagFilter && e.key === 'Escape') {
+          hashtagFilter = null;
+          renderMain();
+        }
+      });
+
+      // ---- INITIAL TAB ----
+      setTab('global');
+    });
+  </script>
+
+  <footer class="w-full px-3 py-1 bg-gradient-to-r from-cyan-200/60 to-fuchsia-100/30 dark:from-cyan-500/30 dark:to-fuchsia-500/20 neon glow rounded-t-xl text-center text-sm text-cyan-700 dark:text-cyan-300 font-mono fixed bottom-0 left-0 z-50" role="contentinfo">
+    Feedback? <a href="https://wa.me/7974823298" target="_blank" rel="noopener" class="underline hover:text-cyan-400">WhatsApp: 7974823298</a>
+    <br />
+    <small>
+      <address style="display:inline; font-style:normal;">author-nitesh patel</address>
+      &nbsp;|&nbsp;
+      <span>date published-5 June 2025</span>
+    </small>
+  </footer>
+
+  <script async data-cfasync="false" src="//pl27087788.profitableratecpm.com/1c9e68a4327495d68753589dd3d7e482/invoke.js"></script>
+  <div id="container-1c9e68a4327495d68753589dd3d7e482"></div>
+</body>
+</html>
